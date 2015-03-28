@@ -290,7 +290,7 @@ body.dark {color:#eee; background: #1b1b1b;}
 	display: block;
 	width: 100%; 
 	float: none; 
-	text-align: center;
+	text-align: left;
 	margin: 5px 0;
 	}
 	.timeline-item-content {margin-bottom: 0; padding: 5px 20px;}
