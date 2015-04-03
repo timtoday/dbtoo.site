@@ -1,10 +1,10 @@
 # Site settings
-title: Emerald | A simple Jekyll blog
-description: "A minimal blog template, build with Jekyll."
-url: "http://www.jacoporabolini.com/emerald"
+title: DBtoo | da bai tu
+description: "Tim's blog."
+url: "http://dbtoo.com"
 author:
-  name: "Jacopo Rabolini"
-  url: "http://www.jacoporabolini.com"
+  name: "Tim"
+  url: "http://dbtoo.com"
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
