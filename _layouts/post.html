@@ -9,5 +9,9 @@ layout: default
 		{{ content }}
 		
 	</div>
+	<div class="tags">
+Tags
+{% for tag in page.tags %} <div class='tag'><a href='tag/#{{tag}}'>{{tag}}</a></div> {% endfor %}
+</div>
 </div>
 
