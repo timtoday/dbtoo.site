@@ -9,10 +9,11 @@ layout: default
 		{{ content }}
 		
 	</div>
-	{% if post.tags %}
-	<div class="tags">tags: {% for tag in page.tags %} <ul class='tags'><li><a href='tag/#{{tag}}'>{{tag}}</a></li></ul> {% endfor %}
-		<div class="clear"></div>
-	</div>
+	{% if page.tags %}
+	<ul class="tags">tags: {% for tag in page.tags %} <li><a href='tag/#{{tag}}'>{{tag}}</a></li>{% endfor %}
+		
+	</ul>
+	<div class="clear"></div>
 	{% endif %}
 </div>
 
