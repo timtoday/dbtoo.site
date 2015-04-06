@@ -9,7 +9,7 @@ layout: default
 		{{ content }}
 		
 	</div>
-	{% if page.tags %}
+	{% if page.tags.length > 0 %}
 	<ul class="tags">tags: {% for tag in page.tags %} <li><a href='tag/#{{tag}}'>{{tag}}</a></li>{% endfor %}
 		
 	</ul>
