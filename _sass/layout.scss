@@ -228,6 +228,15 @@ code {
      -moz-border-radius: 4px;
           border-radius: 4px;
 }
+.tags ul{
+  list-style-type: none;
+  display: block;
+}
+.tags li{
+    float: left;
+    margin-right: 1em;
+}
+
 
 /* Footer */
 footer {
