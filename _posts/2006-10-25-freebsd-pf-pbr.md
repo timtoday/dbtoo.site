@@ -5,4 +5,54 @@ tags:
 - Firewall
 - Kernel
 ---
-<div> <p>device pf<br>options ALTQ<br>options ALTQ_CBQ<br>options ALTQ_RED<br>options ALTQ_RIO<br>options ALTQ_HFSC<br>options ALTQ_CDNR<br>options ALTQ_PRIQ</p><p>Note: If you are installing altq on a multiprocessor system, add options ALTQ_NOPPC to your configuration before you recompile your kernel.</p><p> </p><p><br># vi /etc/pf.conf<br>=================================================<br>if_isp1="fxp0"<br>if_isp2="ne3"<br>gw_isp1="192.168.0.1"<br>gw_isp2="192.168.1.10"</p><p>block all</p><p>pass quick on lo0 all</p><p>pass in quick on $if_isp1 reply-to ( $if_isp1 $gw_isp1 ) proto {tcp,udp,icmp} to any keep state<br>pass in quick on $if_isp2 reply-to ( $if_isp2 $gw_isp2 ) proto {tcp,udp,icmp} to any keep state</p><p>pass out keep state<br>=================================================</p><p>为了试验方便，以上PF规则没有对TCP/UDP等协议的端口进行限制。大家根据自己的实际情况修改一下即可。为了方便控制PF的启动和关闭，下面列出我使用的一个SHELL脚步：</p><p># vi /etc/rc.d/pf.sh<br>=================================================<br>#!/bin/sh<br># made by llzqq<br># pf startup scripts<br>#</p><p>case "$1" in</p><p>start)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  if [ -f /etc/pf.conf ]; then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  /sbin/pfctl -e -f /etc/pf.conf<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  fi<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ;;</p><p>stop)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  /sbin/pfctl -F all<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  /sbin/pfctl -d<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ;;<br>*)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  echo "$0 start | stop"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ;;</p><p>esac<br>exit 0</p> </div>
+{% highlight shell linenos %}
+device pf
+options ALTQ
+options ALTQ_CBQ
+options ALTQ_RED
+options ALTQ_RIO
+options ALTQ_HFSC
+options ALTQ_CDNR
+options ALTQ_PRIQ
+Note: If you are installing altq on a multiprocessor system, add options ALTQ_NOPPC to your configuration before you recompile your kernel.
+{% endhighlight %}
+
+
+# vi /etc/pf.conf
+=================================================
+{% highlight shell linenos %}
+if_isp1="fxp0"
+if_isp2="ne3"
+gw_isp1="192.168.0.1"
+gw_isp2="192.168.1.10"
+block all
+pass quick on lo0 all
+pass in quick on $if_isp1 reply-to ( $if_isp1 $gw_isp1 ) proto {tcp,udp,icmp} to any keep state
+pass in quick on $if_isp2 reply-to ( $if_isp2 $gw_isp2 ) proto {tcp,udp,icmp} to any keep state
+pass out keep state
+{% endhighlight %}
+=================================================
+为了试验方便，以上PF规则没有对TCP/UDP等协议的端口进行限制。大家根据自己的实际情况修改一下即可。为了方便控制PF的启动和关闭，下面列出我使用的一个SHELL脚步：
+# vi /etc/rc.d/pf.sh
+=================================================
+{% highlight shell linenos %}
+#!/bin/sh
+# made by llzqq
+# pf startup scripts
+#
+case "$1" in
+start)
+        if [ -f /etc/pf.conf ]; then
+                /sbin/pfctl -e -f /etc/pf.conf
+        fi
+        ;;
+stop)
+        /sbin/pfctl -F all
+        /sbin/pfctl -d
+        ;;
+*)
+        echo "$0 start | stop"
+        ;;
+esac
+exit 0
+{% endhighlight %}
