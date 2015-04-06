@@ -235,6 +235,12 @@ code {
 .tags li{
     float: left;
     margin-right: 0.6em;
+    background:#ccc;    
+}
+.tags li:hover{
+    float: left;
+    margin-right: 0.6em;
+    background:#fff;    
 }
 .clear{
   clear:both;
