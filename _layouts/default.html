@@ -1,9 +1,5 @@
 ---
-title: Tim's blog | DbToo.Com
-tags:
-- .NET
-- C#
-- UI
+Tim's blog | title: DBtoo
 ---
 <!DOCTYPE html>
 <html>
@@ -11,25 +7,25 @@ tags:
 {% include head.html %}
 
 <body>
-	<div id="wrap">
-	  	
-	  	<!-- Navigation -->
-	  	{% include menu.html %}
+  <div id="wrap">
+      
+      <!-- Navigation -->
+      {% include menu.html %}
     
     <!-- Icon menu -->
-	  <a href="#" id="nav-menu">
-	  	<div id="menu"></div>
-	  </a>
+    <a href="#" id="nav-menu">
+      <div id="menu"></div>
+    </a>
 
       <!-- Header -->
-	    {% include header.html %}
+      {% include header.html %}
 
     <!-- Main content -->
-	  <div id="container">
+    <div id="container">
 
-	  	{{ content }}
-		
-		  <!-- Pagination links -->
+      {{ content }}
+    
+      <!-- Pagination links -->
       {% if paginator.total_pages > 1 %}
         <div class="pagination">
           {% if paginator.previous_page == 1 %}
@@ -58,14 +54,14 @@ tags:
         </div>
         {% endif %}
 
-	  </div>
-	    
-	    <!-- Footer -->
-	    {% include footer.html %}
+    </div>
+      
+      <!-- Footer -->
+      {% include footer.html %}
 
-	    <!-- Script -->
+      <!-- Script -->
       {% include script.html %}
 
-	</div>
+  </div>
 </body>
 </html>
