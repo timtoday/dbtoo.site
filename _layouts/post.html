@@ -10,7 +10,7 @@ layout: default
 		
 	</div>
 	{% if page.tags.size > 0 %}
-	<ul class="tags">tags: {% for tag in page.tags %} <li><a href='tag/#{{tag}}'>{{tag}}</a></li>{% endfor %}
+	<ul class="tags">{% for tag in page.tags %} <li><a href='tag/#{{tag}}'>{{tag}}</a></li>{% endfor %}
 		
 	</ul>
 	<div class="clear"></div>
