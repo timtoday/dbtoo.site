@@ -4,7 +4,7 @@ title: Tags
 permalink: /tag/
 ---
 
-Click on a tag to see relevant list of posts.
+## Tags
 
 <ul class="tags">
 {% for tag in site.tags %}
