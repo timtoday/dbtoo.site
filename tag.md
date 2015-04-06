@@ -12,7 +12,7 @@ Click on a tag to see relevant list of posts.
   <li><a href="/tag/#{{t | downcase | replace:" ","-" }}">{{ t | downcase }}</a></li>
 {% endfor %}
 </ul>
-
+<div class="clear"></div>
 ---
 
 {% for tag in site.tags %}
