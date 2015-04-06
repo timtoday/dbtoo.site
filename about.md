@@ -5,7 +5,8 @@ title: About Tim
 ## 关于    
 
 ![tim](/resume/static/portrait.jpg "tim")    
-# Tim wang    
+
+## Tim wang    
 80后    
 湖北人    
 长期居住深圳    
