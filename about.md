@@ -18,8 +18,8 @@ Tim wang
     
 项目嘛:    
 金融，医疗，教育，物流，外贸    
-门户，搜索，SNS，B2C，B2B，ERP，    
-OA，IM，VOIP。    
+门户，搜索，SNS，B2C，B2B，ERP, OA，IM，VOIP。   
+    
 
     
 ......篇幅太长就不一一列举了。。。    
