@@ -6,7 +6,7 @@ tags:
 - Kernel
 ---
 
-{% highlight shell linenos %}
+{% highlight bash linenos %}
 
 echo ipfilter_enable="YES" >>/etc/rc.conf
 cat >>/etc/ipf.rules <<EOF
