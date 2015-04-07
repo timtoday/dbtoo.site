@@ -1,0 +1,7 @@
+---
+title:[Javascript] 自动排序的表格
+layout: post
+tags:
+- js
+---
+<div> <p>常使用網頁的表格來顯示資料的玩家們，是不是常會覺得：「要是表格的欄位也能讓使用者點選來自動排序就好了!」。現在，你不需要另外用動態網頁語言 去撰寫複雜(如PHP, ASP, JSP…)的程式碼，只要再網頁中掛上一個只有17KB的Javascript程式，然後簡單修改一下網頁內容，就能讓你網頁中每個表格的欄位都能排序 喔！快來試試看吧！<a href="http://csg.yu-img.com/blog_images/ _AFA0/image.png"><br/></a></p><p> </p><p>網頁中的表格裡面的文字、數字都是死的，無法讓我們選擇欄位來排序，除非你使用一些動態語言，得花好一番工夫才有辦法搞定一個能動態排序的表格。現 在有了「sorttable」這支Javascript小程式，可以輕鬆讓你建立動態排序的表格，不需要程式設計的基礎也能用喔～</p><blockquote><p>sorttable:<br/>官方網站：<a href="http://www.kryogenix.org/code/browser/sorttable/" title="http://www.kryogenix.org/code/browser/sorttable/">http://www.kryogenix.org/code/browser/sorttable/</a><br/>下載點：<a href="http://www.kryogenix.org/code/browser/sorttable/sorttable.js" title="http://www.kryogenix.org/code/browser/sorttable/sorttable.js">http://www.kryogenix.org/code/browser/sorttable/sorttable.js</a></p></blockquote>使用方式<ol> <li>先下載檔案(sorttable.js)到網頁所在的資料夾</li> <li>編輯網頁的&lt;head&gt;標籤，加入：        &lt;script src="sorttable.js"&gt;&lt;/script&gt;<br/><br/>&lt;style type="text/css"&gt;<br/><br/>/* Sortable tables */<br/><br/>table.sortable thead {<br/><br/>    background-color:#eee;<br/><br/>    color:#666666;<br/><br/>    font-weight: bold;<br/><br/>    cursor: default;<br/><br/>}<br/><br/>&lt;/style&gt;        </li> <li>修改表格的&lt;table&gt;標籤，後面加上class=”sortable” ，成為：    &lt;table class="sortable"&gt;    </li> <li>存檔，大功告成！  怎麼樣，簡單吧！</li></ol> </div>

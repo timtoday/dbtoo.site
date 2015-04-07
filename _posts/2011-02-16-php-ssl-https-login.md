@@ -1,0 +1,9 @@
+---
+title:php模拟ssl登录https网站
+layout: post
+tags:
+- Php
+- SSL
+- Crack
+---
+<div> <br/>&lt;?php<br/><br/><br/><br/># //Post的地址<br/><br/>$url='https://us.etrade.com/login.fcc';<br/>#<br/># //目标来源页面<br/>$referer='https://us.etrade.com/e/t/pfm/portfolioview?portfolio=A6756-2892&amp;_formtarget=portfoliolist&amp;traxui=ac_combo';<br/>#<br/># //如果目标网站需要登录，可以在这里写入模拟的Cookie值<br/>$cookie_file='G:/cookies.txt';<br/>#<br/># //将$post_data中写入你所截取的数据包，可以使用Winsock Expert截取数据包<br/>$post_data='PASSWORD=****&amp;USER=****&amp;TARGET=/e/t/invest/socreateentry';<br/>#<br/># //部分网站验证浏览器信息，可以在下面模拟浏览器，可以直接将USERAGENT复制到这里面<br/>$useragent='Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)';<br/>#<br/> <br/>$ch = curl_init();<br/>curl_setopt($ch, CURLOPT_POST, 1);<br/>curl_setopt($ch, CURLOPT_HEADER, 0);<br/>curl_setopt($ch, CURLOPT_URL,$url);<br/>//curl_setopt($ch, CURLOPT_REFERER, $referer);<br/>curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);<br/>curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_file);  //保存cookie<br/>curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_file); //发送cookie<br/>curl_setopt($ch, CURLOPT_USERAGENT,$useragent);<br/>curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,FALSE);<br/> curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);<br/>curl_exec($ch);<br/><br/><br/>curl_setopt($ch, CURLOPT_POST, 1);<br/>curl_setopt($ch, CURLOPT_HEADER, 0);<br/>curl_setopt($ch, CURLOPT_URL,$referer);<br/>//curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);<br/>curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_file);  //保存cookie<br/>curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_file); //发送cookie<br/>curl_setopt($ch, CURLOPT_USERAGENT,$useragent);<br/>curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,FALSE);<br/> curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);<br/>$result = curl_exec($ch);<br/><br/>if($result==NULL){<br/>     echo"Error:&lt;br&gt;";<br/>     echo curl_errno($ch)."-".curl_error($ch)."&lt;br&gt;";<br/>}<br/><br/><br/>curl_close($ch);<br/><br/>print $result;<br/> </div>
