@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Tim
+title: About
 ---
 ## 关于    
 
