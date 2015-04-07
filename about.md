@@ -2,7 +2,7 @@
 layout: page
 title: About
 ---
-## 关于    
+  
 
 ![tim](/resume/static/portrait.jpg "tim")    
 
