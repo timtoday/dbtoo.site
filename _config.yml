@@ -6,7 +6,7 @@ pygments:         true
 permalink:        /post/:title
 
 # Setup
-title:            "no zuo no die"
+title:            "No Zuo No Die"
 description:      "Tim's blog"
 url:              http://dbtoo.com
 baseurl:          "/"
