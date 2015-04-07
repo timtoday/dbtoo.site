@@ -6,7 +6,7 @@ tags:
 - Shell
 ---
 
-{% highlight bash linenos %}
+```bash
 
 #!/usr/local/bin/bash
 #1. mkdir /home/dbackup
@@ -49,4 +49,5 @@ sleep 10s
 rm -rf $backup_path/$file
 rm -rf $backup_path/$SQL_db.sql
 
-{% endhighlight %}
+```
+
