@@ -1,15 +1,12 @@
 ---
 layout: default
 ---
-<div id="post-page">
-	<h2>{{ page.title }}</h2>		
-	<span class="by-line">{{ page.date | date_to_string }}</span>
-	<div class="content">
 
-		{{ content }}
-		
-	</div>
-	{% if page.tags.size > 0 %}
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date: "%b %e %Y" }}</span>
+  {{ content }}
+  {% if page.tags.size > 0 %}
 	<hr/>
 	<ul class="tags">{% for tag in page.tags %} <li><a href='/tag/#{{tag}}'>{{tag}}</a></li>{% endfor %}
 		
@@ -17,4 +14,3 @@ layout: default
 	<div class="clear"></div>
 	{% endif %}
 </div>
-

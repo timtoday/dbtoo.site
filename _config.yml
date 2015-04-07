@@ -1,30 +1,18 @@
-# Site settings
-title: Tim's blog | DbToo.Com
-description: "Tim's blog."
-url: "http://dbtoo.com"
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        /post/:title
+
+# Setup
+title:            "DBtoo"
+description:      "Tim's blog"
+url:              http://dbtoo.com
+baseurl:          "/"
+paginate:         5
+
 author:
-  name: "Tim"
-  url: "http://dbtoo.com"
+  name:           "tim"
 
-# Build settings
-baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
-markdown: kramdown
-source: .
-destination: ./_site
-permalink: /:title
-paginate: 8
-paginate_path: /page:num/
-excerpt_separator: "<!-- break -->"
-
-
-# Default values
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-
-# Custom variables
-version: "1.0.1"
+ 
