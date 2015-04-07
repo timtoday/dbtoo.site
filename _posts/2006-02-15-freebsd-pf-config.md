@@ -1,5 +1,6 @@
 ---
 title: freebsd 下pf详细配置
+layout: post
 tags:
 - FreeBSD
 - Firewall

@@ -1,5 +1,6 @@
 ---
 title: 自动备份mysql
+layout: post
 tags:
 - Linux
 - Mysql

@@ -1,5 +1,6 @@
 ---
 title: freebsd下ipfw详细配置说明
+layout: post
 tags:
 - FreeBSD
 - Firewall

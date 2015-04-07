@@ -1,5 +1,6 @@
 ---
 title: freebsd 双线策略路由(ipfilter方法)
+layout: post
 tags:
 - FreeBSD
 - Firewall

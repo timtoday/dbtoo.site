@@ -1,5 +1,6 @@
 ---
 title: FreeBSD6.2架设WEB服务器备忘-手动
+layout: post
 tags:
 - FreeBSD
 - FAMP

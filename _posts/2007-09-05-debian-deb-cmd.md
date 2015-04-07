@@ -1,5 +1,6 @@
 ---
 title: debian 软件的安装与卸载
+layout: post
 tags:
 - Linux
 - debian

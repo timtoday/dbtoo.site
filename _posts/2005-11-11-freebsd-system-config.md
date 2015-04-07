@@ -1,5 +1,6 @@
 ---
 title: freebsd 常用系统配置
+layout: post
 tags:
 - FreeBSD
 - Linux

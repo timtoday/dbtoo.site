@@ -1,5 +1,6 @@
 ---
 title: FreeBSD系统优化部分内核参数调整中文注释
+layout: post
 tags:
 - FreeBSD
 - Linux

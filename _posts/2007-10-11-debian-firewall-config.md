@@ -1,5 +1,6 @@
 ---
 title: debian 下防火墙iptables配置
+layout: post
 tags:
 - Linux
 - debian
