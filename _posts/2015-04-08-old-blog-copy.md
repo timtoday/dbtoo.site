@@ -5,37 +5,31 @@ tags :
 - Python
 ---
 终于弄到一个好点的模板，一口气把百度的陈年旧文字全采过来了，简单的Py脚本就搞掂啦
+
+
 ```python
 import sys
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
-
 from bs4 import BeautifulSoup
 import urllib
 import os
-
-
 def u2md(url):    
     html_doc = urllib.urlopen(url).read()
-
     soup = BeautifulSoup(html_doc)
-    ct = unicode(soup.find(id="content"))
-   
+    ct = unicode(soup.find(id="content"))   
     h2 = unicode(soup.h2.string)
     print h2
-
     ctmk=u'---\n'
     ctmk=ctmk+u'title:'+h2+'\n'
     ctmk=ctmk+u'layout: post\n'
     ctmk=ctmk+u'---\n'
-    ctmk=ctmk+ct
-     
+    ctmk=ctmk+ct   
     
 
     fileHandle = open ( h2+'.md', 'w' ) 
     fileHandle.write (ctmk) 
     fileHandle.close() 
-
 utls = ['http://hi.baidu.com/tim_today/item/7565d62e954a55fd51fd8776',
     'http://hi.baidu.com/tim_today/item/6fc9733981bca585b611db7a',
     'http://hi.baidu.com/tim_today/item/5a6b94914a6730dd1a49df7a',
@@ -100,8 +94,6 @@ utls = ['http://hi.baidu.com/tim_today/item/7565d62e954a55fd51fd8776',
     'http://hi.baidu.com/tim_today/item/f775e8ded214b53a49e1dd29',
     'http://hi.baidu.com/tim_today/item/4f0d44ec2dcb353e87d9de29']
 for u in utls:
-    u2md(u)  
-    
-
+    u2md(u)
 
 ```
