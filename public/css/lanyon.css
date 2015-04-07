@@ -636,6 +636,7 @@ video {
 .tags{
   list-style-type: none;
   display: block;
+  padding: 0px;
 }
 .tags li{
     float: left;
