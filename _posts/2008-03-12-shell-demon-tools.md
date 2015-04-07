@@ -1,7 +1,7 @@
 ---
-title:shell简单的守护程序
-layout: post
-tags:
+title : shell简单的守护程序
+layout :  post
+tags : 
 - Linux
 - shell
 ---

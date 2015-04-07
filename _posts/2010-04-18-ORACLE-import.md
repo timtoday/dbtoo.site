@@ -1,7 +1,7 @@
 ---
-title:ORACLE数据导入方法
-layout: post
-tags:
+title : ORACLE数据导入方法
+layout :  post
+tags : 
 - Linux
 - Oracle
 ---

@@ -1,7 +1,7 @@
 ---
-title: 自动删除7天前的apache日志
-layout: post
-tags:
+title :  自动删除7天前的apache日志
+layout :  post
+tags : 
 - Linux
 - Apache
 - Log

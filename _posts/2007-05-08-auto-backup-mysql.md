@@ -1,7 +1,7 @@
 ---
-title: 自动备份mysql
-layout: post
-tags:
+title :  自动备份mysql
+layout :  post
+tags : 
 - Linux
 - Mysql
 - Shell
@@ -13,7 +13,7 @@ tags:
 #1. mkdir /home/dbackup
 #2. chmod 700 backup.sh
 #3. vi /etc/crontab , 30 03 * * * root /home/dbackup/mysql_backup_db.sh
-#everyday 03:30 the backup.sh will work
+#everyday 03 : 30 the backup.sh will work
 #System Setup
 #ftp Info
 host=192.168.2.248 #ftp host
