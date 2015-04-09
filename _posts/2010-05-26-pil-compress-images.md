@@ -48,6 +48,7 @@ im.save("1_s.png",colors=255)
 ```
 
 整个目录png压缩   
+
 ```python
 import os
 import sys
