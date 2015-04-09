@@ -46,3 +46,43 @@ im.save("1_s.png",colors=255)
 
 
 ```
+
+整个目录png压缩   
+```python
+import os
+import sys
+import Image
+
+
+
+def dir_png(d):
+    r=[]
+    listfile=os.listdir(d)
+    for line in listfile:
+        if line[-4:] == '.png':
+            r.append(line)      
+      
+    return r
+       
+
+
+
+def s_img(f_in,f_out):    
+    im = Image.open(f_in)
+    im.load()
+    im = im.convert('RGB').convert('P', palette=Image.ADAPTIVE, colors=255)
+    im.save(f_out,colors=255)
+    print f_in+"->"+f_out+"---------ok"
+
+
+indir = 'thumb'
+outdir = 'tb'
+
+flist=dir_png(indir)
+for pg in flist:
+    fl=indir+"/"+pg
+    fo=outdir+"/"+pg
+    s_img(fl,fo)
+    
+
+```
