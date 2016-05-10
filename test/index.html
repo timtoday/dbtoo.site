@@ -1,1 +1,101 @@
-hello
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="//cdn.bootcss.com/ionic/1.2.4/css/ionic.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  </head>
+  <body>
+ 
+ <div id="data-list">
+ <div class="card">
+  <div class="item item-divider">
+    <i class="icon ion-bluetooth"></i> LANQINTEACH
+  </div>
+  <div class="item item-text-wrap">
+    <div class="row">
+		<div class="col col-75">MAC:as:sdd:asd:sd</div>
+		<div class="col">RSSI:-51</div>
+	</div>
+	<div class="row">
+		<div class="col">MAJOR:212112</div>
+		<div class="col">MINOR:32323</div>
+		<div class="col">TXPOWER:-51</div>
+	</div>
+	<div class="row">
+		UUID:xsasds-sdasd-sad-as-saf-safsa-f
+	</div>
+  </div>
+  </div>
+   
+   <div class="card">
+  <div class="item item-divider">
+    <i class="icon ion-bluetooth"></i> LANQINTEACH
+  </div>
+  <div class="item item-text-wrap">
+    <div class="row">
+		<div class="col col-75">MAC:as:sdd:asd:sd</div>
+		<div class="col">RSSI:-51</div>
+	</div>
+	<div class="row">
+		<div class="col">MAJOR:212112</div>
+		<div class="col">MINOR:32323</div>
+		<div class="col">TXPOWER:-51</div>
+	</div>
+	<div class="row">
+		UUID:xsasds-sdasd-sad-as-saf-safsa-f
+	</div>
+  </div>
+  </div>
+  </div>
+   <button type="button" onclick="clear_list();">clear</button>
+   <button type="button" onclick="list_add_item(1,2,3,4,5,6,7);">add</button>
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function() {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function(msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			console.log('Live reload enabled.');
+		})();
+	}
+	// ]]>
+
+ 	
+function clear_list(){
+	$("#data-list").html('loading');
+}
+function list_add_item(bname,bmac,brssi,bmajor,bminor,bmtxpower,buuid)
+{
+  item_html = '<div class="card"><div class="item item-divider"><i class="icon ion-bluetooth"></i>'+bname+'</div><div class="item item-text-wrap"><div class="row"><div class="col col-75">MAC:'+bmac+'</div><div class="col">RSSI:'+brssi+'</div></div><div class="row"><div class="col">MAJOR:'+bmajor+'</div><div class="col">MINOR:'+bminor+'</div><div class="col">TXPOWER:'+bmtxpower+'</div></div><div class="row">UUID:'+buuid+'</div></div></div>';
+  $("#data-list").append(item_html);
+  
+}
+
+</script>
+</body>
+</html>
