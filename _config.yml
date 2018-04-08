@@ -1,8 +1,3 @@
-# Dependencies
-#markdown:         redcarpet
-#pygments:         true
-highlighter:      rouge
-# Permalinks
 permalink:        /post/:title
 
 # Setup
