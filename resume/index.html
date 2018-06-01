@@ -185,10 +185,14 @@
 								<p><small class="muted">from 2013 to 2016</small></p>
 								<h4 class="media-heading primary-color">Drugdu B2B平台 <small>www.drugdu.com</small></h4>	
 								 <p><b>Drugdu.com B2B平台</b>:类似阿里巴巴的外贸b2b平台，属于医疗行业垂直领域项目</p>	
-								 <p>主要负责，分布式技术架构，系统框架改进、系统推送算法设计及实现。</p>	
+								 <p>跨境分布式系统架构：国内节点、美国节点、欧洲节点各个节点之间文件存储、数据实时同步系统设计</p>
+								 <p>主键算法：基于Twitter Snowflake算法的c语言实现，并采用PHP扩展方式集成到开发框架，实现分布式主键唯一性</p>	
+								 <p>推荐算法：根据用户行为、系统日志、用户类型关系等属性。采用协同过滤方式为用户推荐可能感兴趣等产品</p>
 								<p><b>Drugdu APP移动应用</b>：贸易平台移动应用，用于买卖家之间即时沟通</p>
-								<p>主要负责，APP协议规范订制、分布式IM服务端开发</p>	
-								<small><a title="">C</a> | <a title="">Php</a>  |  <a title="">Swoole</a> |  <a title="">Mysql</a> | <a title="">HTML5</a> | <a title="">Protobuf</a></small>
+								<p>IM Server：使用PHP的Swoole扩展，采用Protobuf格式自定义IM协议，实现TCP聊天服务端。并支持国内外节点之间消息路由转发功能。</p>
+								<p><b>Drugdu 监控平台</b>：主要实现接口监控、前端监控两部分，通过执行或加载时间上报用户数据，确定内部API调用是否正常、海外用户所在国家地区加载速度效率，并指定异常上报埋点，出现异常发送邮件或者短信</p>
+								<p><b>Drugdu 日志系统</b>：采用Elasticsearch存储国内外服务器节点的所有日志数据，统一分析管理。</p>
+								<small><a title="">C</a> | <a title="">Swoole</a>  | <a title="">Protobuf</a>  |  <a title="">RabbitMQ</a> |  <a title="">Mysql</a> | <a title="">Elasticsearch</a> | <a title="">ELK</a></small>
 								<p><br/></p>
 			 
 								
@@ -472,7 +476,8 @@
 						<span class="label">Kohana</span>
 						<span class="label">Symfony</span>
 						<span class="label">ThinkPhp</span>
-					 
+						 <span class="label">Laravel</span>
+						
 						<span class="label">Django</span>
 						<span class="label">WebPY</span>
 					 					
@@ -500,7 +505,7 @@
 						<span class="label">phpCMS</span>
 						<span class="label">sugar crm</span>
 						<span class="label">Ecshop</span>
-			  		    <span class="label">EcMall</span>
+			  		        <span class="label">EcMall</span>
 						<span class="label">Pear</span>
 						<span class="label">Smarty</span>
 						<span class="label">TBS</span>
@@ -525,6 +530,7 @@
 						<span class="label">PhoneGap</span>	
 						<span class="label">LESS</span>
 						<span class="label">Jsonp</span>
+						<span class="label">Elasticsearch</span>
 						
 			  		</div>
 			  	</div>		  	
@@ -556,7 +562,7 @@
 				</div>
 				<div class="testimonial">
 				  	<blockquote>
-						  <p> 熟悉云计算相关技术，有实际云存储、云计算，虚拟化、集群、负载均衡系统架构经验。</p>
+						  <p> 熟悉云计算相关技术，有实际云存储、云计算，虚拟化、集群、负载均衡系统架构经验, 并有多年跨境系统架构经验。</p>
 						  <small><a title="">HADOOP</a> | <a title="">SD</a> | <a title="">HA</a></small>
 					</blockquote>
 				</div>
@@ -603,7 +609,7 @@
 		</div><!--/row-->
       
 		<div id="footer">
-		<p>© Tim Wang - 2014</p>
+		<p>© Tim Wang - 2018</p>
 		</div>
 
 </div><!--/.container-->
